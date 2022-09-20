@@ -57,7 +57,10 @@ def _check_registration(
     for relay, status in relay_status.items():
         print(f"Relay: '{relay}', {status}")
     if exit_on_non_registered and not_registered:
-        non_registered_relays = {relay for relay in relays if relay != _REGISTERED_MSG}
+        non_registered_relays = []
+        for relay, status in relay_status.items():
+            if status != _REGISTERED_MSG:
+                non_registered_relays.append(relay)
         exit(f"Relay registration failed for {non_registered_relays}.")
 
 
