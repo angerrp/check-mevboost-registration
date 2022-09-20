@@ -16,6 +16,7 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   --relays [RELAYS [RELAYS ...]]
+                        Relays to check for registration e.g. bloxroute.ethical.blxrbdn.com relay.edennetwork.io
   --exit-on-non-registered
                         Exit with exitcode 1 when registration could not be found.
 ```

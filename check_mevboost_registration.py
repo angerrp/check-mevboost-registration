@@ -68,7 +68,14 @@ if __name__ == "__main__":
         help="Validator address e.g. 0x0000000000000000000000000000000000000"
         "00000000000000000000000000000000000000000000000000000000000",
     )
-    parser.add_argument("--relays", nargs="*", type=str, default=None, required=False)
+    parser.add_argument(
+        "--relays",
+        nargs="*",
+        type=str,
+        default=None,
+        required=False,
+        help="Relays to check for registration e.g. bloxroute.ethical.blxrbdn.com relay.edennetwork.io",
+    )
     parser.add_argument(
         "--exit-on-non-registered",
         action="store_true",
