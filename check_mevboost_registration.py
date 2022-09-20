@@ -9,14 +9,15 @@ from urllib.parse import urljoin
 
 _REST_ENDPOINT = "/relay/v1/data/validator_registration?pubkey="
 
-_RELAYS = {
+_RELAYS = [
     "boost-relay.flashbots.net",
     "bloxroute.max-profit.blxrbdn.com",
     "bloxroute.ethical.blxrbdn.com",
     "bloxroute.regulated.blxrbdn.com",
     "builder-relay-mainnet.blocknative.com",
     "relay.edennetwork.io",
-}
+    "mainnet-relay.securerpc.com"
+]
 
 # some user agent
 _HEADERS = {"User-Agent": "Mozilla/5.0"}
