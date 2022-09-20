@@ -32,7 +32,7 @@ def _check_registration(
     relays: Optional[Iterable[str]] = None,
 ) -> None:
     if not _ADDRESS_REGEX.fullmatch(address.lower()):
-        exit("Not a valid validator address provided.")
+        raise ValueError("Invalid validator address provided.")
     relay_status = {}
     endpoint = f"{_REST_ENDPOINT}{address}"
     not_registered = False
@@ -85,3 +85,4 @@ if __name__ == "__main__":
     _check_registration(
         args.validator_address, args.exit_on_non_registered, args.relays
     )
+
