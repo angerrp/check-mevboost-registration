@@ -16,7 +16,7 @@ _RELAYS = [
     "bloxroute.regulated.blxrbdn.com",
     "builder-relay-mainnet.blocknative.com",
     "relay.edennetwork.io",
-    "mainnet-relay.securerpc.com"
+    "mainnet-relay.securerpc.com",
 ]
 
 # some user agent
@@ -43,9 +43,9 @@ def _check_registration(
         url = urljoin(f"https://{relay}", endpoint)
         try:
             req = urllib.request.Request(url=url, headers=_HEADERS)
-            with urllib.request.urlopen(req, timeout=10) as response:
+            with urllib.request.urlopen(req, timeout=20) as response:
                 result = response.read().decode()
-        except HTTPError:
+        except (HTTPError, TimeoutError):
             not_registered = True
         else:
             result = json.loads(result)
