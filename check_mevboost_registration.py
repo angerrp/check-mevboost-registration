@@ -17,6 +17,7 @@ _RELAYS = [
     "builder-relay-mainnet.blocknative.com",
     "relay.edennetwork.io",
     "mainnet-relay.securerpc.com",
+    "relayooor.wtf",
 ]
 
 # some user agent
