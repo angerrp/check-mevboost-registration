@@ -18,6 +18,8 @@ _RELAYS = [
     "relay.edennetwork.io",
     "mainnet-relay.securerpc.com",
     "relayooor.wtf",
+    "relay.ultrasound.money",
+    "agnostic-relay.net",
 ]
 
 # some user agent
