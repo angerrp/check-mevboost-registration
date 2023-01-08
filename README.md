@@ -15,6 +15,12 @@ Relay: 'builder-relay-mainnet.blocknative.com', ✔️ registered
 Relay: 'bloxroute.max-profit.blxrbdn.com', ✔️ registered
 Relay: 'boost-relay.flashbots.net', ✔️ registered
 Relay: 'bloxroute.regulated.blxrbdn.com', ❌ not found
+Relay: 'builder-relay-mainnet.blocknative.com', ✔️ registered
+Relay: 'relay.edennetwork.io', ❌ not found
+Relay: 'mainnet-relay.securerpc.com', ✔️ registered
+Relay: 'relayooor.wtf', ✔️ registered
+Relay: 'relay.ultrasound.money', ✔️ registered
+Relay: 'agnostic-relay.net', ✔️ registered
 ```
 
 ## Advanced Usage
