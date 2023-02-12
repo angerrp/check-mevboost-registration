@@ -21,6 +21,7 @@ Relay: 'mainnet-relay.securerpc.com', ✔️ registered
 Relay: 'relayooor.wtf', ✔️ registered
 Relay: 'relay.ultrasound.money', ✔️ registered
 Relay: 'agnostic-relay.net', ✔️ registered
+Relay: 'aestus.live', ❌ not found
 ```
 
 ## Advanced Usage
@@ -37,4 +38,5 @@ optional arguments:
                         Relays to check for registration e.g. bloxroute.ethical.blxrbdn.com relay.edennetwork.io
   --exit-on-non-registered
                         Exit with exitcode 1 when registration could not be found.
+  --json                Output relay registration status as json
 ```

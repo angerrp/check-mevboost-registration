@@ -20,6 +20,7 @@ _RELAYS = [
     "relayooor.wtf",
     "relay.ultrasound.money",
     "agnostic-relay.net",
+    "aestus.live",
 ]
 
 # some user agent
@@ -34,6 +35,7 @@ def _check_registration(
     address: str,
     exit_on_non_registered: bool = False,
     relays: Optional[Iterable[str]] = None,
+    output_json: bool = False,
 ) -> None:
     if not _ADDRESS_REGEX.fullmatch(address.lower()):
         raise ValueError("Invalid validator address provided.")
@@ -56,10 +58,12 @@ def _check_registration(
                 relay_status[relay] = _REGISTERED_MSG
             else:
                 not_registered = True
-
-    print(f"Validator '{address}'")
-    for relay, status in relay_status.items():
-        print(f"Relay: '{relay}', {status}")
+    if output_json:
+        print(json.dumps(relay_status))
+    else:
+        print(f"Validator '{address}'")
+        for relay, status in relay_status.items():
+            print(f"Relay: '{relay}', {status}")
     if exit_on_non_registered and not_registered:
         non_registered_relays = []
         for relay, status in relay_status.items():
@@ -81,15 +85,18 @@ if __name__ == "__main__":
         type=str,
         default=None,
         required=False,
-        help="Relays to check for registration e.g. bloxroute.ethical.blxrbdn.com relay.edennetwork.io",
+        help="Relays to check for registration e.g. "
+        "bloxroute.ethical.blxrbdn.com relay.edennetwork.io",
     )
     parser.add_argument(
         "--exit-on-non-registered",
         action="store_true",
         help="Exit with exitcode 1" " when registration could not be found.",
     )
+    parser.add_argument(
+        "--json", action="store_true", help="Output relay registration status as json"
+    )
     args = parser.parse_args()
     _check_registration(
-        args.validator_address, args.exit_on_non_registered, args.relays
+        args.validator_address, args.exit_on_non_registered, args.relays, args.json
     )
-
