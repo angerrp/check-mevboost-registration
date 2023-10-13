@@ -9,18 +9,18 @@ from urllib.parse import urljoin
 
 _REST_ENDPOINT = "/relay/v1/data/validator_registration?pubkey="
 
+# https://relay.wenmerge.com/
 _RELAYS = [
     "boost-relay.flashbots.net",
     "bloxroute.max-profit.blxrbdn.com",
-    "bloxroute.ethical.blxrbdn.com",
     "bloxroute.regulated.blxrbdn.com",
     "builder-relay-mainnet.blocknative.com",
     "relay.edennetwork.io",
     "mainnet-relay.securerpc.com",
-    "relayooor.wtf",
     "relay.ultrasound.money",
     "agnostic-relay.net",
     "aestus.live",
+    "relay.wenmerge.com",
 ]
 
 # some user agent
@@ -50,7 +50,7 @@ def _check_registration(
             req = urllib.request.Request(url=url, headers=_HEADERS)
             with urllib.request.urlopen(req, timeout=20) as response:
                 result = response.read().decode()
-        except (HTTPError, TimeoutError):
+        except (HTTPError, TimeoutError, urllib.error.URLError):
             not_registered = True
         else:
             result = json.loads(result)
