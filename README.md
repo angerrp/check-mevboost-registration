@@ -10,15 +10,16 @@ e.g
 
 Validator '0x8000a44457e18388c5be046e22e86aedae1a07638394df63adfcd32d29b4e86c030219e94782ebebe398c9a05a8a28e7'
 Relay: 'boost-relay.flashbots.net', ✔️ registered
-Relay: 'bloxroute.max-profit.blxrbdn.com', ✔️ registered
+Relay: 'bloxroute.max-profit.blxrbdn.com', ❌ not found
 Relay: 'bloxroute.regulated.blxrbdn.com', ❌ not found
 Relay: 'builder-relay-mainnet.blocknative.com', ❌ not found
 Relay: 'relay.edennetwork.io', ❌ not found
 Relay: 'mainnet-relay.securerpc.com', ❌ not found
 Relay: 'relay.ultrasound.money', ✔️ registered
 Relay: 'agnostic-relay.net', ✔️ registered
-Relay: 'aestus.live', ❌ not found
+Relay: 'aestus.live', ✔️ registered
 Relay: 'relay.wenmerge.com', ❌ not found
+Relay: 'proof-relay.ponrelay.com', ❌ not found
 ```
 
 ## Advanced Usage

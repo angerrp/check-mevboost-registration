@@ -9,7 +9,7 @@ from urllib.parse import urljoin
 
 _REST_ENDPOINT = "/relay/v1/data/validator_registration?pubkey="
 
-# https://relay.wenmerge.com/
+# https://ethstaker.cc/mev-relay-list
 _RELAYS = [
     "boost-relay.flashbots.net",
     "bloxroute.max-profit.blxrbdn.com",
@@ -21,6 +21,7 @@ _RELAYS = [
     "agnostic-relay.net",
     "aestus.live",
     "relay.wenmerge.com",
+    "proof-relay.ponrelay.com",
 ]
 
 # some user agent
