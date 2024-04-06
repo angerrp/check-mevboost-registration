@@ -55,7 +55,7 @@ def _check_registration(
             not_registered = True
         else:
             result = json.loads(result)
-            if result.get("message", {}).get("pubkey", "") == address:
+            if result.get("message", {}).get("pubkey", "") == address or result.get("Message", {}).get("pubkey", "") == address:
                 relay_status[relay] = _REGISTERED_MSG
             else:
                 not_registered = True
